@@ -45,6 +45,6 @@ pixel_config = {
 
 graph_change_endpoint = f"{pixel_post_endpoint}/{pixel_config['date']}"
 
-response = requests.put(url=graph_change_endpoint, json=pixel_config, headers=headers)
+response = requests.put(url=graph_change_endpoint, json=pixel_config, headers=headers, timeout=60)
 print(response.text)
 
